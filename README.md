@@ -147,6 +147,7 @@ http://localhost:8088/book/101
 
 ## Future Enhancements:
 - Use any sql db to store the normalized version of the book store
+- Use `next-jdbc` for JDBC wrapper
 - Use `migratus` library for sql migration
 - Use `camel-snake-kabab` library for transforming keys and json serialization
 - Use `integrant` to initialize the app and get the system config. Pass the system config via interceptor to context so that all request can use the config in their function signatures.
