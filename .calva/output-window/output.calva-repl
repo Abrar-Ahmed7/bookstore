@@ -1,0 +1,347 @@
+; This is the Calva REPL Window.
+; It's just a file, really, with some special treatment from Calva.
+; Use it as a REPL input prompt if you like. (When the REPL is connected.)
+; TIPS: The keyboard shortcut `ctrl+alt+o r` shows and focuses this window
+; Please see https://calva.io/repl-window/ for more info.
+; Happy coding! ♥️
+
+; TIPS: As with any Clojure file when the REPL is connected:
+; - `alt+enter` evaluates the current top level form.
+; - `ctrl+enter` evaluates the current form.
+; Special for this file:
+; - `alt+up` and `alt+down` traverse up and down the REPL command history
+;    when the cursor is after the last contents at the prompt
+; 
+; See also the Calva Inspector: https://calva.io/inspector/
+
+PLEASE NOTE
+We will update the default location of this file.
+The new default location will be
+  "<projectRootPath>/.calva/repl.calva-repl"
+For now the legacy path is used by default.
+To give yourself a smooth transition, you can opt in
+to the change, by configuring this setting as false:
+  "calva.useLegacyReplWindowPath"
+and then add "**/.calva/repl.calva-repl" to your ".gitignore" file.
+
+
+This file is configured as the output destination for all REPL output.
+You can configure this with the setting:
+  "calva.outputDestinations"
+
+
+; Connecting ...
+; Reading port file: file:///Users/vortoix/clojure/bookstore/.nrepl-port ...
+; Using host:port localhost:56452 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉bookstore.server꞉> 
+"Please see https://calva.io/output/#about-stdout-in-the-repl-window
+about why stdout printed to this file is prepended with `;` to be line comments."
+clj꞉bookstore.server꞉> 
+#'bookstore.service/get-book
+clj꞉bookstore.service꞉> 
+#'bookstore.service/a
+clj꞉bookstore.service꞉> 
+{:a "hello"}
+clj꞉bookstore.service꞉> 
+; Execution error (ClassCastException) at bookstore.service/eval17381 (form-init17886054385723710806.clj:76).
+; class clojure.lang.PersistentArrayMap cannot be cast to class java.util.Map$Entry (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.util.Map$Entry is in module java.base of loader 'bootstrap')
+clj꞉bookstore.service꞉> 
+(:a)
+clj꞉bookstore.service꞉> 
+"hello"
+clj꞉bookstore.service꞉> 
+"a"
+clj꞉bookstore.service꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: (cd /Users/vortoix/clojure/bookstore; lein update-in :dependencies conj '[nrepl,"1.3.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.55.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: (cd /Users/vortoix/clojure/bookstore; lein update-in :dependencies conj '[nrepl,"1.3.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.55.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:60305 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉bookstore.server꞉> 
+; Jack-in done.
+clj꞉bookstore.server꞉> 
+(count {:a "s"
+        :b "a"})
+2
+clj꞉bookstore.server꞉> 
+
+
+(merge {:a "b"} {:a "c" :b "b"})
+{:a "c"}
+clj꞉bookstore.server꞉> 
+{:a "c", :b "b"}
+clj꞉bookstore.server꞉> 
+; Syntax error compiling at (src/bookstore/db.clj:67:22).
+; Unable to resolve symbol: books-db in this context
+clj꞉bookstore.db꞉> 
+#'bookstore.db/books-db
+clj꞉bookstore.db꞉> 
+#'bookstore.db/get-next-id
+clj꞉bookstore.db꞉> 
+; Syntax error compiling at (src/bookstore/db.clj:47:3).
+; Unable to resolve symbol: validate-book! in this context
+clj꞉bookstore.db꞉> 
+; Syntax error compiling at (src/bookstore/db.clj:20:3).
+; No such namespace: mu
+clj꞉bookstore.db꞉> 
+#'bookstore.db/Book
+clj꞉bookstore.db꞉> 
+; Syntax error compiling at (src/bookstore/db.clj:20:3).
+; No such namespace: mu
+clj꞉bookstore.db꞉> 
+#'bookstore.db/Book
+clj꞉bookstore.db꞉> 
+; Execution error (FileNotFoundException) at bookstore.db/eval25771$loading (REPL:1).
+; Could not locate malli/core__init.class, malli/core.clj or malli/core.cljc on classpath.
+clj꞉bookstore.db꞉> 
+; Execution error (FileNotFoundException) at bookstore.db/eval25777$loading (REPL:1).
+; Could not locate malli/core__init.class, malli/core.clj or malli/core.cljc on classpath.
+clj꞉bookstore.db꞉> 
+#'bookstore.db/Book
+clj꞉bookstore.db꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in: (cd /Users/vortoix/clojure/bookstore; lein update-in :dependencies conj '[nrepl,"1.3.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.55.4"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:57445 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉bookstore.server꞉> 
+; Jack-in done.
+clj꞉bookstore.server꞉> 
+nil
+clj꞉bookstore.db꞉> 
+#'bookstore.db/Book
+clj꞉bookstore.db꞉> 
+#'bookstore.db/StoredBook
+clj꞉bookstore.db꞉> 
+#'bookstore.db/validate-book!
+clj꞉bookstore.db꞉> 
+#'bookstore.db/books-db
+clj꞉bookstore.db꞉> 
+#'bookstore.db/get-next-id
+clj꞉bookstore.db꞉> 
+#'bookstore.db/add-book!
+clj꞉bookstore.db꞉> 
+#'bookstore.db/get-book
+clj꞉bookstore.db꞉> 
+#'bookstore.db/list-books
+clj꞉bookstore.db꞉> 
+#'bookstore.db/update-book!
+clj꞉bookstore.db꞉> 
+#'bookstore.db/delete-book!
+clj꞉bookstore.db꞉> 
+#'bookstore.db/init-sample-data
+clj꞉bookstore.db꞉> 
+{:title "Web Development with Clojure",
+ :author "Dmitri Sotnikov",
+ :price 44.99,
+ :isbn "978-1680500820",
+ :description "Build bulletproof web apps with Clojure",
+ :id 3}
+clj꞉bookstore.db꞉> 
+{:title "Web Development with Clojure",
+ :author "Dmitri Sotnikov",
+ :price 44.99,
+ :isbn "978-1680500820",
+ :description "Build bulletproof web apps with Clojure",
+ :id 3}
+clj꞉bookstore.db꞉> 
+#'bookstore.db/update-book!
+clj꞉bookstore.db꞉> 
+{:title "Web Development with Clojure",
+ :author "Dmitri Sotnikov",
+ :price 44.99,
+ :isbn "978-1680500820",
+ :description "Build bulletproof web apps with Clojure",
+ :id 3}
+clj꞉bookstore.db꞉> 
+#'bookstore.db/update-book!
+clj꞉bookstore.db꞉> 
+; Execution error (IllegalArgumentException) at bookstore.db/update-book! (REPL:70).
+; assoc expects even number of arguments after map/vector, found odd number
+clj꞉bookstore.db꞉> 
+#'bookstore.db/update-book!
+clj꞉bookstore.db꞉> 
+{:title "Web Development with Clojure",
+ :author "Dmitri Sotnikov",
+ :price 44.99,
+ :isbn "978-1680500820",
+ :description "Build bulletproof web apps with Clojure",
+ :id 3}
+clj꞉bookstore.db꞉> 
+; Syntax error compiling at (src/bookstore/db.clj:67:16).
+; Unable to resolve symbol: valid-book? in this context
+clj꞉bookstore.db꞉> 
+{:title "Web Development with Clojure",
+ :author "Dmitri Sotnikov",
+ :price 44.99,
+ :isbn "978-1680500820",
+ :description "Build bulletproof web apps with Clojure",
+ :id 3}
+clj꞉bookstore.db꞉> 
+; Syntax error compiling at (src/bookstore/db.clj:67:16).
+; Unable to resolve symbol: valid-book? in this context
+clj꞉bookstore.db꞉> 
+#'bookstore.db/StoredBook
+clj꞉bookstore.db꞉> 
+#'bookstore.db/valid-book?
+clj꞉bookstore.db꞉> 
+{:title "Web Development with Clojure",
+ :author "Dmitri Sotnikov",
+ :price 44.99,
+ :isbn "978-1680500820",
+ :description "Build bulletproof web apps with Clojure",
+ :id 3}
+clj꞉bookstore.db꞉> 
+#'bookstore.db/update-book!
+clj꞉bookstore.db꞉> 
+{:title "Web Development with Clojure",
+ :author "Dmitri Sotnikov",
+ :price 50,
+ :isbn "978-1680500820",
+ :description "Build bulletproof web apps with Clojure",
+ :id 3}
+clj꞉bookstore.db꞉> 
+{1
+ {:title "The Clojure Programming Language",
+  :author "Chas Emerick",
+  :price 49.99,
+  :isbn "978-1449394707",
+  :description "Comprehensive guide to Clojure programming",
+  :id 1},
+ 2
+ {:title "Living Clojure",
+  :author "Carin Meier",
+  :price 39.99,
+  :isbn "978-1491909270",
+  :description "An introduction to functional programming with Clojure",
+  :id 2},
+ 3
+ {:title "Web Development with Clojure",
+  :author "Dmitri Sotnikov",
+  :price 50,
+  :isbn "978-1680500820",
+  :description "Build bulletproof web apps with Clojure",
+  :id 3}}
+clj꞉bookstore.db꞉> 
+#'bookstore.db/books-db
+clj꞉bookstore.db꞉> 
+; Execution error (ClassCastException) at bookstore.db/add-book! (REPL:50).
+; class clojure.lang.PersistentHashSet cannot be cast to class clojure.lang.Associative (clojure.lang.PersistentHashSet and clojure.lang.Associative are in unnamed module of loader 'app')
+clj꞉bookstore.db꞉> 
+nil
+clj꞉bookstore.db꞉> 
+#'bookstore.db/books-db
+clj꞉bookstore.db꞉> 
+; Syntax error compiling at (src/bookstore/db.clj:124:1).
+; Unable to resolve symbol: seed-sample-data in this context
+clj꞉bookstore.db꞉> 
+#'bookstore.db/seed-sample-data
+clj꞉bookstore.db꞉> 
+{:title "Web Development with Clojure",
+ :author "Dmitri Sotnikov",
+ :price 44.99,
+ :isbn "978-1680500820",
+ :description "Build bulletproof web apps with Clojure",
+ :id 3}
+clj꞉bookstore.db꞉> 
+({:title "The Clojure Programming Language",
+  :author "Chas Emerick",
+  :price 49.99,
+  :isbn "978-1449394707",
+  :description "Comprehensive guide to Clojure programming",
+  :id 1}
+ {:title "Living Clojure",
+  :author "Carin Meier",
+  :price 39.99,
+  :isbn "978-1491909270",
+  :description "An introduction to functional programming with Clojure",
+  :id 2}
+ {:title "Web Development with Clojure",
+  :author "Dmitri Sotnikov",
+  :price 44.99,
+  :isbn "978-1680500820",
+  :description "Build bulletproof web apps with Clojure",
+  :id 3})
+clj꞉bookstore.db꞉> 
+; Syntax error compiling at (src/bookstore/db.clj:95:1).
+; Unable to resolve symbol: find-book in this context
+clj꞉bookstore.db꞉> 
+#'bookstore.db/find-book
+clj꞉bookstore.db꞉> 
+nil
+clj꞉bookstore.db꞉> 
+#'bookstore.db/find-book
+clj꞉bookstore.db꞉> 
+nil
+clj꞉bookstore.db꞉> 
+#'bookstore.db/find-book
+clj꞉bookstore.db꞉> 
+#'bookstore.db/update-book-price!
+clj꞉bookstore.db꞉> 
+({:title "The Clojure Programming Language",
+  :author "Chas Emerick",
+  :price 49.99,
+  :isbn "978-1449394707",
+  :description "Comprehensive guide to Clojure programming",
+  :id 1}
+ {:title "Living Clojure",
+  :author "Carin Meier",
+  :price 39.99,
+  :isbn "978-1491909270",
+  :description "An introduction to functional programming with Clojure",
+  :id 2}
+ {:title "Web Development with Clojure",
+  :author "Dmitri Sotnikov",
+  :price 44.99,
+  :isbn "978-1680500820",
+  :description "Build bulletproof web apps with Clojure",
+  :id 3})
+clj꞉bookstore.db꞉> 
+#'bookstore.db/find-book
+clj꞉bookstore.db꞉> 
+nil
+clj꞉bookstore.db꞉> 
+#'bookstore.db/find-book
+clj꞉bookstore.db꞉> 
+{:title "Web Development with Clojure",
+ :author "Dmitri Sotnikov",
+ :price 44.99,
+ :isbn "978-1680500820",
+ :description "Build bulletproof web apps with Clojure",
+ :id 3}
+clj꞉bookstore.db꞉> 
+(docs atom)
+; Syntax error compiling at (.calva/output-window/output.calva-repl:340:1).
+; Unable to resolve symbol: docs in this context
+clj꞉bookstore.db꞉> 
+(doc atom)
+; Syntax error compiling at (.calva/output-window/output.calva-repl:344:1).
+; Unable to resolve symbol: doc in this context
+clj꞉bookstore.db꞉> 
